@@ -1,0 +1,16 @@
+.index-content{
+    background-image: url(../assets/index.webp);
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-text{
+    font-size: 60px;
+}
+
+.image-btn{
+    font-size: 50px;
+    border-radius: 10px;
+}
