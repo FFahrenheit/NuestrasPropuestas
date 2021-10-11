@@ -1,0 +1,51 @@
+body {
+    font-family: "Lato", sans-serif;
+    max-width: 100%;
+}
+
+.contact-email {
+    font-size: 14px;
+}
+
+.network-icon {
+    font-size: 130%;
+}
+
+.network-icon:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: white !important;
+}
+
+.links-nav {
+    font-size: 120%;
+    font-weight: 600;
+}
+
+.links-nav:hover {
+    color: rgb(189, 0, 0) !important;
+    font-weight: 900;
+}
+
+.no-decoration{
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.no-decoration:hover{
+    text-decoration: none !important;
+    color: rgb(218, 218, 218);
+}
+
+.page-footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 5px;
+    max-height: 40px i !important;
+    padding-bottom: 5px;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
