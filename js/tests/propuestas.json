@@ -1,7 +1,42 @@
 [
     {
+        "id": 1,
         "titulo": "Propuesta legalización del aborto en Jalisco",
         "autor": "Jesús Mendonza",
-        "fecha": "2020-10-30"
+        "fecha": "2020-10-30",
+        "contenido": "Propuesta legal para que se autorize la interrupción legal del embarazo en el estado de Jalisco considerando las debidas condiciones",
+        "partido": "PRI"
+    },
+    {
+        "id": 2,
+        "titulo": "Propuesta para la penalización al maltrato animal",
+        "autor": "Javier Aguilar",
+        "fecha": "2021-01-23",
+        "contenido": "Propuesta para la implementación de sanciones legales contra el maltrato animal con efectos más duros sobre las sanciones",
+        "partido": "MORENA"
+    },
+    {
+        "id": 3,
+        "titulo": "Propuesta para incremento de impuestos en cigarrillos y vaporizadores",
+        "autor": "María del Carmen Cruz",
+        "fecha": "2021-04-25",
+        "contenido": "Petición al gobierno del estado para el incremento de impuestos sobre cigarrillos y vaporizadores con efecto inmediado para evitar su consumo",
+        "partido": "PAN"
+    },
+    {
+        "id": 4,
+        "titulo": "Propuesta para cambio en la Constitución referente al salario mínimo en zonas fronterizar en el Sur de México",
+        "autor": "Jesús Mendonza",
+        "fecha": "2020-10-30",
+        "contenido": "Propuesta para la consideración del salario mínimo en las zonas fronterizas del Sur, dícese de Chiapas, Campeche, Quinatana Roo y Tabasco",
+        "partido": "Movimiento Ciudadano"
+    },
+    {
+        "id": 5,
+        "titulo": "Propuesta para obtención de retroactivos respecto al incremento de salario en los diputados plurinominales",
+        "autor": "Jesús Mendonza",
+        "fecha": "2020-10-30",
+        "contenido": "Propuesta legal referente a la obtención de un ingreso retroactivo afectando a diputados plurinominales que tuvieron un incremento en su salario",
+        "partido": "Hagamos"
     }
 ]
