@@ -49,3 +49,12 @@ body {
     text-align: center;
     align-content: center;
 }
+
+.navbar-brand:hover {
+    color: rgb(88, 88, 88) !important;
+    transition: color 0.3s;
+}
+
+.navbar-brand{
+    transition: color 0.3s;
+}

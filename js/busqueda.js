@@ -55,5 +55,4 @@ function generateCards(data){
         </div>`;
         propuestas.innerHTML += html;
     });
-    let x = ``
 }
