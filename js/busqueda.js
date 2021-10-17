@@ -11,10 +11,23 @@ window.onload = () =>{
 
         const urlParams = new URLSearchParams(queryString);
         let keywords = urlParams.get('busqueda');
-        console.log(keywords);
 
         searchTitle.innerHTML = `Búsqueda de propuestas con respecto a "${ keywords }:"`;
         
         searchInput.value = keywords;
+        searchWithKeywords(keywords);
     }
+}
+
+function searchWithKeywords(keywords){
+    console.log(keywords);
+    fetch('js/tests/propuestas.json')
+    .then(res => res.json())
+    .then(data =>{
+        console.log("aqui llega js");
+        console.log(data);
+    })
+    .catch(error=>{
+        console.log(error);
+    });
 }
