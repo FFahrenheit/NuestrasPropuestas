@@ -1,0 +1,62 @@
+.contact-content {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    left: 0;
+    background-image: url(../assets/congreso.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 1333px; */
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    filter: blur(15px);
+    -webkit-filter: blur(15px);
+    color: white;
+}
+
+.contact-text {
+    font-size: 150%;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.55); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    margin-top: 40px;
+    /* position: absolute; */
+    transform: translate(0%, 0%);
+    z-index: 2;
+    /* width: 80%; */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.contact-title {
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+.form-control {
+    text-align: center;
+    font-weight: 400;
+}
+
+.impulso {
+    font-weight: normal;
+}
+
+.impulso a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    transition: color 0.3s;
+}
+
+.impulso a:hover {
+    color: rgb(189, 0, 0) !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
