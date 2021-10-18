@@ -1,0 +1,23 @@
+.details{
+    font-size: 130%;
+}
+
+.details{
+    font-weight: bolder;
+}
+
+.detail-content{
+    font-weight: normal !important;
+}
+
+#p-contenido{
+    font-size: 20px;
+}
+
+#p-descarga{
+    font-size: 22px;
+}
+
+#p-descarga:hover{
+    text-decoration: none;
+}

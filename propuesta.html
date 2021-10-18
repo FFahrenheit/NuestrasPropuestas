@@ -36,10 +36,12 @@
                 </a>
             </div>
             <div class="col-md-4 text-center">
-                <a href="http://facebook.com" target="_blank" title="Ir al Facebook" class="network-icon mx-1" style="color: #4267B2;">
+                <a href="http://facebook.com" target="_blank" title="Ir al Facebook" class="network-icon mx-1"
+                    style="color: #4267B2;">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="http://twitter.com" target="_blank" title="Ir al Twitter" class="network-icon mx-1" style="color: #00ACEE;">
+                <a href="http://twitter.com" target="_blank" title="Ir al Twitter" class="network-icon mx-1"
+                    style="color: #00ACEE;">
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
@@ -68,7 +70,8 @@
             </div>
 
             <form class="form-inline my-2 my-lg-0 col-md-4">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar propuestas" aria-label="Search" id="searchInput">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar propuestas" aria-label="Search"
+                    id="searchInput">
                 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" id="searchButton">Buscar</button>
             </form>
         </nav>
@@ -76,8 +79,51 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-centered">
-                    <div class="index-content">
+                    <div class="index-content my-2">
+                        <h2 class="text-left font-weight-bold" id="p-titulo"> Título de la propuesta </h2>
+                        <div class="row m-3">
+                            <div class="col-md-6">
+                                <h3>Detalles</h3>
+                                <p class="details">
+                                    <i class="fas fa-user-alt mx-3"></i>
+                                    Propuesto por:
+                                    <span id="p-autor" class="detail-content"></span>
+                                </p>
+                                <p class="details">
+                                    <i class="fas fa-clock mx-3"></i>
+                                    Propuesto en:
+                                    <span id="p-fecha" class="detail-content"></span>
 
+                                </p>
+                                <p class="details">
+                                    <i class="fas fa-vote-yea mx-3"></i>
+                                    Partido:
+                                    <span id="p-partido" class="detail-content"></span>
+
+                                </p>
+                                <p class="details">
+                                    <i class="fas fa-info-circle mx-3"></i>
+                                    Estado:
+                                    <span id="p-estado" class="detail-content">
+                                        No disponible
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Extracto</h3>
+                                <p id="p-contenido">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nesciunt iste
+                                    accusamus porro neque, velit sed ducimus ratione cupiditate debitis cum fuga ab
+                                    voluptas, aliquid iusto excepturi doloribus. Repellat, vel.
+                                </p>
+
+                                <h3>Descargables</h3>
+                                <a id="p-descarga" href="" class="text-danger">
+                                    <i class="fas fa-file-pdf mx-2"></i>
+                                    Descargar propuesta
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
