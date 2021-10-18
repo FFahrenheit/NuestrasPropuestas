@@ -13,7 +13,7 @@ window.onload = () =>{
         const urlParams = new URLSearchParams(queryString);
         let keywords = urlParams.get('busqueda');
 
-        searchTitle.innerHTML = `Búsqueda de propuestas con respecto a "${ keywords }:"`;
+        searchTitle.innerHTML = `Búsqueda de propuestas con respecto a "${ keywords }": `;
         
         searchInput.value = keywords;
         searchWithKeywords(keywords);
