@@ -1,0 +1,30 @@
+body,html{
+    height: 100% !important;
+}
+
+.login-background{
+    background-image: url("../../../assets/img/background.jpg");
+    height: 100% !important; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-logo{
+    margin: 5px;
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(60,60,60);
+}
+
+.login{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;   
+}
