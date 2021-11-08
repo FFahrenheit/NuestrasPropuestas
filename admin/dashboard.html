@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/admin.css">
     <script src="https://kit.fontawesome.com/a5af5be790.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
         crossorigin="anonymous"></script>
@@ -47,55 +48,49 @@
                 </a>
             </div>
             <div class="col-md-4">
+                <span class="logout text-light" onclick="logout()">
+                    Cerrar sesión
+                </span>
                 &nbsp;
             </div>
         </div>
 
-        <div class="index-content">
-            <div class="container">
-                <div class="row">
-                    <div class="card mx-auto text-center mt-5 shadow p-3 mb-5 bg-white rounded login-card">
-                        <div class="card-body">
-                            <h2 class="title">Administración de #MisPropuestas</h2>
-                            <br>
-                            <h4>
-                                Inicie sesión para acceder a la administración del sitio
-                            </h4>
-                            <br>
-                            <form id="login" class="mx-3 login">
-                                <div class="form-group">
-                                    <label for="">Nombre de usuario: </label>
-                                    <font color="red">*</font>
-                                    <input type="text" name="username" id="username"
-                                        placeholder="Ingresa tu usuario" class="form-control">
+        <div class="">
+            <div class="container-fluid">
+                <div id="wrapper">
 
+                    <!-- Sidebar -->
+                    <div id="sidebar-wrapper">
+                        <ul class="sidebar-nav">
+                            <li class="sidebar-brand">
+                                <a href="/admin/dashboard.html">
+                                    #NuestrasPropuestas
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/admin/dashboard.html">Administrar</a>
+                            </li>
+                            <li>
+                                <a href="/admin/nueva.html">Nueva</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /#sidebar-wrapper -->
+            
+                    <!-- Page Content -->
+                    <div id="page-content-wrapper">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h1>Hola</h1>
                                 </div>
-                                <div class="form-group">
-                                    <label for="">Contraseña: </label>
-                                    <font color="red">*</font>
-                                    <div class="input-group">
-                                        <input name="password" type="password"
-                                            name="password" id="password" placeholder="Escriba su contraseña"
-                                            class="form-control">
-                                    </div>
-
-                                </div>
-                                <div class="form-check form-switch remember-label">
-                                    <input class="form-check-input" type="checkbox" id="remember" name="remember">
-                                    <label class="form-check-label" for="remember">
-                                        Recordarme
-                                    </label>
-                                </div>
-
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary px-5 login btn-lg py-1">
-                                        Iniciar sesión
-                                    </button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
+                    <!-- /#page-content-wrapper -->
+            
                 </div>
+                <!-- /#wrapper -->
             </div>
 
             <div style="height: 20px;"></div>
@@ -111,7 +106,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
             crossorigin="anonymous"></script>
         <script src="../js/admin.js"></script>
-        <script src="../js/login.js"></script>
+        <script src="../js/dashboard.js"></script>
+
     </body>
 
 </html>
