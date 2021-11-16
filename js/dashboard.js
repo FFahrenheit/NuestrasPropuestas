@@ -21,7 +21,7 @@ function handleSearch(e){
 
 window.onload = () =>{
     const queryString = window.location.search;
-    console.log(queryString);
+    console.log({ queryString });
 
     if(queryString == ''){
         searchTitle.innerHTML = 'Propuestas del congreso: ';
@@ -39,7 +39,7 @@ window.onload = () =>{
 }
 
 function searchWithKeywords(keywords){
-    console.log(keywords);
+    console.log({ keywords });
     fetch('../js/tests/propuestas.json')
     .then(res => res.json())
     .then(data =>{

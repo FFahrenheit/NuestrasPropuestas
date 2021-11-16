@@ -14,21 +14,29 @@ form.addEventListener('submit', (e) => {
 
     console.log(data);
 
-    if(data.username == 'admin' && data.password == '1234'){
-        localStorage.getItem('logged');
-        if(remember.value){
+    if (data.username == 'admin' && data.password == '1234') {
+        localStorage.setItem('logged', 'true');
+        if (remember.value) {
             localStorage.setItem('username', data.username);
-        }else{
+        } else {
             localStorage.setItem('username', data.username);
         }
         window.location.assign('dashboard.html');
-    }else{
+    } else {
         alert('Credenciales incorrectas');
     }
 })
 
 
 window.onload = () => {
+    const logged = localStorage.getItem('logged') || 'false';
+
+    if (logged == 'true') {
+        console.log('A dashboard');
+        window.location.assign('dashboard.html');
+    }
+
     const username = localStorage.getItem('username') || '';
     userForm.value = username;
+
 }

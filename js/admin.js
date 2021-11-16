@@ -1,13 +1,13 @@
 const logout = () => {
-    localStorage.removeItem('logged');
+    localStorage.setItem('logged', 'false');
     window.location.assign('login.html');
 }
 
-window.onload = () => {
-    const logged = localStorage.getItem('logged');
-
-    if (logged == 'false') {
+(() => {
+    const logged = localStorage.getItem('logged') || 'false';
+    console.log({ logged });
+    if (logged == 'false' && !window.location.href.includes('login')) {
         console.log('A login');
         window.location.assign('login.html');
     }
-}
+})();
