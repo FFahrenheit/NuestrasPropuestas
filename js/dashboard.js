@@ -13,9 +13,9 @@ function handleSearch(e){
     console.log(encodeURIComponent(searchQuery));
     if(searchQuery.length > 0){
         searchQuery = encodeURIComponent(searchQuery);
-        window.location.href = 'dashboard.html?busqueda=' + searchQuery;
+        window.location.assign('dashboard.html?busqueda=' + searchQuery);
     }else{
-        window.location.href = 'dashboard.html';
+        window.location.assign('dashboard.html');
     }
 }
 
@@ -66,7 +66,7 @@ function generateCards(data){
                 <p class="card-text my-1">
                     ${ d.contenido }
                 </p>
-                <a href="/admin/nueva.html?id=${ d.id }" class="btn btn-primary card-link">
+                <a href="nueva.html?id=${ d.id }" class="btn btn-primary card-link">
                     Modificar detalles
                 </a>
                 <a onclick="deletePropuesta(${ d.id })" class="btn btn-danger card-link text-light" style="cursor:pointer;">

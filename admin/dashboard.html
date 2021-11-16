@@ -28,7 +28,7 @@
 
 <body>
     <div class="w-100 container-fluid">
-        <div class="row bg-dark py-3" style="position: sticky !important;top: 0px !important; z-index: 100;">
+        <div class="row bg-dark py-3 header">
             <div class="col-md-4 text-light">
                 <a href="mailto:example@example.com" class="no-decoration" title="Contáctanos">
                     <span class="align-middle contact-email">
@@ -47,11 +47,13 @@
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 text-center">
                 <span class="logout text-light" onclick="logout()">
                     Cerrar sesión
                 </span>
-                &nbsp;
+                <a href="../index.html" title="Ir al sistema" class="mx-1 float-right" style="color: gray;">
+                    <i class="fas fa-home"></i>
+                </a>
             </div>
         </div>
 
@@ -63,15 +65,15 @@
                     <div id="sidebar-wrapper">
                         <ul class="sidebar-nav">
                             <li class="sidebar-brand">
-                                <a href="/admin/dashboard.html">
+                                <a href="dashboard.html">
                                     #NuestrasPropuestas
                                 </a>
                             </li>
                             <li class="active">
-                                <a href="/admin/dashboard.html">Administrar</a>
+                                <a href="dashboard.html">Administrar</a>
                             </li>
                             <li>
-                                <a href="/admin/nueva.html">Nueva</a>
+                                <a href="nueva.html">Nueva</a>
                             </li>
                         </ul>
                     </div>

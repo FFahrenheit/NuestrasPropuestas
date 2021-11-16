@@ -12,7 +12,7 @@ window.onload = () =>{
     console.log(queryString);
 
     if(queryString == ''){
-        window.location.href = 'busqueda.html'
+        window.location.assign('busqueda.html');
     }else{
         const urlParams = new URLSearchParams(queryString);
         let id = urlParams.get('id');

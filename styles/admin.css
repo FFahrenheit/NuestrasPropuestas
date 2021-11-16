@@ -149,3 +149,9 @@ body {
         margin-right: 0;
     }
 }
+
+.header{
+    position: sticky !important;
+    top: 0px !important; 
+    z-index: 100;
+}

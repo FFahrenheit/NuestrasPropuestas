@@ -1,6 +1,6 @@
 const logout = () => {
     localStorage.removeItem('logged');
-    window.location.href = '/admin';
+    window.location.assign('login.html');
 }
 
 window.onload = () => {
@@ -8,6 +8,6 @@ window.onload = () => {
 
     if (logged == 'false') {
         console.log('A login');
-        window.location.href = '/admin/login.html'
+        window.location.assign('login.html');
     }
 }

@@ -21,7 +21,7 @@ form.addEventListener('submit', (e) => {
         }else{
             localStorage.setItem('username', data.username);
         }
-        window.location.href = '/admin/dashboard.html'
+        window.location.assign('dashboard.html');
     }else{
         alert('Credenciales incorrectas');
     }

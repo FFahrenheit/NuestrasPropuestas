@@ -10,8 +10,8 @@ function handleSearch(e){
     console.log(encodeURIComponent(searchQuery));
     if(searchQuery.length > 0){
         searchQuery = encodeURIComponent(searchQuery);
-        window.location.href = 'busqueda.html?busqueda=' + searchQuery;
+        window.location.assign('busqueda.html?busqueda=' + searchQuery);
     }else{
-        window.location.href = 'busqueda.html';
+        window.location.assign('busqueda.html');
     }
 }
