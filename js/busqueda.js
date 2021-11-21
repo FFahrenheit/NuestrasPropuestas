@@ -22,11 +22,13 @@ window.onload = () =>{
 
 function searchWithKeywords(keywords){
     console.log(keywords);
-    fetch('js/tests/propuestas.json')
+    fetch('http://127.0.0.1:5000/api/v0/propuestas/' + keywords, {
+        method: 'GET'
+    })
     .then(res => res.json())
     .then(data =>{
         console.log(data);
-        generateCards(data);
+        generateCards(data['propuestas']);
     })
     .catch(error=>{
         console.log(error);
@@ -46,7 +48,7 @@ function generateCards(data){
                     <i class="fas fa-vote-yea mx-3"></i> ${ d.partido }
                 </h6>
                 <p class="card-text my-1">
-                    ${ d.contenido } [...]
+                    ${ d.extracto.substring(0, 1024) } [...]
                 </p>
                 <a href="propuesta.html?id=${ d.id }" class="card-link text-danger">
                     Ver detalles

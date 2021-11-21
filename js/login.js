@@ -21,7 +21,8 @@ form.addEventListener('submit', (e) => {
             'Content-Type': 'application/json'
         },
         body: data
-    }).then(res => res.json())
+    })
+        .then(res => res.json())
         .then(resp => {
             console.log(resp);
             if (resp['code'] == 'ok') {
@@ -30,17 +31,18 @@ form.addEventListener('submit', (e) => {
                     localStorage.setItem('username', username.value);
                 } else {
                     localStorage.setItem('username', '');
-                
+
                 }
                 localStorage.setItem('logged', 'true');
                 localStorage.setItem('id', resp['id']);
                 window.location.assign('dashboard.html');
-            } else if(resp['code'] == 'noexiste') {
+            } else if (resp['code'] == 'noexiste') {
                 alert('Credenciales incorrectas');
-            } else{ 
+            } else {
                 alert('Error se servidor');
             }
-        }).catch(error => {
+        })
+        .catch(error => {
             console.log(error);
             alert('No se pudo establecer conexión al servidor');
         });
