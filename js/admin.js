@@ -1,5 +1,6 @@
 const logout = () => {
     localStorage.setItem('logged', 'false');
+    localStorage.setItem('id','');
     window.location.assign('login.html');
 }
 
