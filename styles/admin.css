@@ -155,3 +155,9 @@ body {
     top: 0px !important; 
     z-index: 100;
 }
+
+.loading{
+    width: 18px;
+    height: 18px;
+    font-size: 50%;
+}
