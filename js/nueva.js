@@ -2,6 +2,7 @@ const title = document.getElementById('h-titulo');
 const form = document.getElementById('form');
 const archivo = document.getElementById('archivo');
 const fileStatus = document.getElementById('file_status');
+let pdfFile = '';
 
 const propuesta = {
     titulo: document.getElementById('titulo'),
@@ -57,7 +58,46 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     if (confirm('¿Desea guardar los cambios hechos?')) {
-        console.log('Ok!');
+
+        const data = {
+            titulo: propuesta.titulo.value,
+            pdf: pdfFile,
+            estado: propuesta.estado.value,
+            partido: propuesta.partido.value,
+            fecha: propuesta.fecha.value,
+            autor: propuesta.autor.value,
+            subido: localStorage.getItem('id'),
+            extracto: propuesta.contenido.value
+        }
+
+        const body = JSON.stringify(data);
+
+        console.log({ data });
+
+        fetch('http://127.0.0.1:5000/api/v0/admin/propuesta', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: body
+        }).then(res => res.json())
+            .then(resp => {
+                console.log(resp);
+                if (resp['code'] == 'ok') {
+                    alert('Propuesta subida');
+                    Object.keys(propuesta).forEach(k => {
+                        propuesta[k].value = '';
+                    });
+
+                } else {
+                    alert('No se pudo subir la propuesta');
+                }
+
+            }).catch(error => {
+                console.log(error);
+                alert('No se pudo establecer conexión al servidor');
+            });
     }
 });
 
@@ -81,6 +121,7 @@ archivo.addEventListener('change', () => {
                 fileStatus.innerHTML = `<i class="fas fa-check-circle text-success"></i>`;
                 form.contenido.value = resp['extract'] || 'N/A';
                 form.contenido.scrollTop = form.contenido.scrollHeight;
+                pdfFile = resp['pdf'];
 
             } else if (resp['code'] == 'fail') {
                 alert('Lectura de archivo no completada');

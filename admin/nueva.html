@@ -91,7 +91,7 @@
                                                 Archivo de la propuesta
                                                 <span id="file_status"></span>
                                             </label>
-                                            <input type="file" class="form-control" id="archivo">
+                                            <input type="file" class="form-control" id="archivo" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="titulo">Título de la propuesta</label>
@@ -115,8 +115,13 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="estado">Estado de propuesta</label>
-                                            <input type="text" class="form-control" id="estado"
-                                                placeholder="Estado actual">
+                                            <select id="estado" class="form-control">
+                                                <option selected disabled>Seleccione el estado</option>
+                                                <option>En proceso</option>
+                                                <option>Archivada</option>
+                                                <option>Activa</option>
+                                                <option>Rechazada</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="contenido">Extracto</label>

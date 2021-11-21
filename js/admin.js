@@ -6,8 +6,10 @@ const logout = () => {
 
 (() => {
     const logged = localStorage.getItem('logged') || 'false';
+    const user = localStorage.getItem('id') || '0';
+
     console.log({ logged });
-    if (logged == 'false' && !window.location.href.includes('login')) {
+    if ((logged == 'false' || user == '0') && !window.location.href.includes('login')) {
         console.log('A login');
         window.location.assign('login.html');
     }

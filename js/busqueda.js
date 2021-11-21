@@ -46,7 +46,7 @@ function generateCards(data){
                     <i class="fas fa-vote-yea mx-3"></i> ${ d.partido }
                 </h6>
                 <p class="card-text my-1">
-                    ${ d.contenido }
+                    ${ d.contenido } [...]
                 </p>
                 <a href="propuesta.html?id=${ d.id }" class="card-link text-danger">
                     Ver detalles
