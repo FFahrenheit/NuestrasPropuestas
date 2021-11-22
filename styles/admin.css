@@ -161,3 +161,16 @@ body {
     height: 18px;
     font-size: 50%;
 }
+
+#link{
+    color: rgb(189, 0, 0) !important;
+}
+
+#my_file{
+    color: rgb(189, 0, 0) !important;
+}
+
+#my_file:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

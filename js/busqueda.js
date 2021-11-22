@@ -44,7 +44,7 @@ function generateCards(data){
                 <h5 class="card-title">${ d.titulo }</h5>
                 <h6 class="card-subtitle text-muted">
                     <i class="fas fa-user-alt mx-3"></i> ${ d.autor }
-                    <i class="fas fa-clock mx-3"></i> ${ d.fecha }
+                    <i class="fas fa-clock mx-3"></i> ${ d.fecha.substring(0, getPosition(d.fecha, ' ', 4)) }
                     <i class="fas fa-vote-yea mx-3"></i> ${ d.partido }
                 </h6>
                 <p class="card-text my-1">
@@ -57,4 +57,8 @@ function generateCards(data){
         </div>`;
         propuestas.innerHTML += html;
     });
+}
+
+function getPosition(string, subString, index) {
+    return string.split(subString, index).join(subString).length;
 }
