@@ -101,16 +101,22 @@
                                         class="network-icon mx-1" style="color: #00ACEE;">
                                         <i class="fab fa-twitter"></i>
                                     </a>
+                                    <a href="http://github.com/FFahrenheit/NuestrasPropuestas" target="_blank"
+                                        title="Ir al repositorio" class="network-icon mx-1" style="color: whitesmoke;">
+                                        <i class="fab fa-github"></i>
+                                    </a>
                                 </p>
                             </div>
                             <div class="col-md-4">
                                 <h5 class="contact-title">ESCRÍBENOS</h5>
-                                <form id="contact-form">
+                                <form id="contact-form" action="https://formspree.io/f/xlezrrby">
                                     <div class="fom-group mt-5">
-                                        <input type="text" required class="form-control my-3" placeholder="NOMBRE">
-                                        <input type="email" required class="form-control my-3" placeholder="EMAIL">
+                                        <input type="text" required class="form-control my-3" placeholder="NOMBRE"
+                                            name="nombre" id="nombre">
+                                        <input type="email" required class="form-control my-3" placeholder="EMAIL"
+                                            name="email" id="email">
                                         <textarea type="text" required class="form-control my-3" placeholder="MENSAJE"
-                                            rows="6"></textarea>
+                                            id="message" rows="6" name="message"></textarea>
                                         <button type="submit" class="btn btn-danger">
                                             ENVIAR
                                         </button>
