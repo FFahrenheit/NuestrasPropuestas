@@ -4,7 +4,8 @@ const propuesta = {
     fecha: document.getElementById('p-fecha'),
     partido: document.getElementById('p-partido'),
     autor: document.getElementById('p-autor'),
-    link: document.getElementById('p-descarga')
+    link: document.getElementById('p-descarga'),
+    estado: document.getElementById('p-estado')
 }
 
 window.onload = () =>{
@@ -44,6 +45,7 @@ function renderInfo(data){
     propuesta.partido.innerHTML = data.partido;
     propuesta.fecha.innerHTML = data.fecha.substring(0, getPosition(data.fecha, ' ', 4));
     propuesta.autor.innerHTML = data.autor;
+    propuesta.estado.innerHTML = data.estado;
     propuesta.link.href = 'http://127.0.0.1:5000/api/v0/file/' + data.archivo;
     propuesta.link.target = '_blank';
 }

@@ -60,7 +60,7 @@ function renderInfo(data) {
     propuesta.fecha.valueAsDate = new Date(data.fecha);
     propuesta.autor.value = data.autor;
     archivo.required = false;
-    fileLink.innerHTML = 'Abrir archivo';
+    fileLink.innerHTML = '<i class="fas fa-file-pdf mx-2"></i> Ver documento';
     fileLink.href = 'http://127.0.0.1:5000/api/v0/file/' + data.archivo;
     pdfFile = data.archivo;
 }
@@ -98,10 +98,11 @@ form.addEventListener('submit', (e) => {
                     console.log(resp);
                     if (resp['code'] == 'ok') {
                         alert('Propuesta subida');
+
                         Object.keys(propuesta).forEach(k => {
                             propuesta[k].value = '';
                         });
-    
+
                     } else {
                         alert('No se pudo subir la propuesta');
                     }
@@ -141,10 +142,7 @@ form.addEventListener('submit', (e) => {
                     console.log(resp);
                     if (resp['code'] == 'ok') {
                         alert('Propuesta modificada');
-                        Object.keys(propuesta).forEach(k => {
-                            propuesta[k].value = '';
-                        });
-    
+                        window.location.assign('dashboard.html');
                     } else {
                         alert('No se pudo modificar la propuesta');
                     }
@@ -170,7 +168,7 @@ archivo.addEventListener('change', () => {
         <span class="sr-only">Loading...</span>
     </div>`;
 
-    fileLink.innerHTML = 'Abrir archivo';
+    fileLink.innerHTML = '<i class="fas fa-file-pdf mx-2"></i> Ver documento';
     fileLink.href = 'http://127.0.0.1:5000/api/v0/file/' + file.name;
 
     fetch('http://127.0.0.1:5000/api/v0/admin/files', {
